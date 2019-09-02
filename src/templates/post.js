@@ -10,6 +10,9 @@ export default function Template({ data }) {
   //TODO: get the layout consistent, no full reload/unmount
   return (
     <Layout>
+      <Helmet>
+        <title>Blog | {post.frontmatter.title}</title>
+      </Helmet>
       <h1>{post.frontmatter.title}</h1>
       <div dangerouslySetInnerHTML={{ __html: post.html }} />
     </Layout>
